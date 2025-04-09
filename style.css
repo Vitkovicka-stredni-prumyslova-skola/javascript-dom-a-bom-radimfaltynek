@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "menu"
+        "content"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    background-color: #f9f9f9; /* Světlejší pozadí pro lepší kontrast */
+    color: #333;
+}
+
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5em; /* Zvýšené padding pro lepší vzhled */
+    text-align: center;
+    font-size: 1.5rem; /* Větší text pro zvýraznění */
+}
+
+nav {
+    grid-area: menu;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Fixní výška pro lepší zarovnání */
+}
+
+nav ul li {
+    margin: 0 1.5em; /* Větší mezery mezi položkami */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem; /* Trochu větší písmo pro odkazy */
+    transition: color 0.3s; /* Přechod pro efekt při hover */
+}
+
+nav ul li a:hover {
+    color: #f0f0f0; /* Jemný efekt změny barvy při najetí myší */
+}
+
+main {
+    grid-area: content;
+    padding: 3em 2em; /* Větší padding pro lepší vzhled */
+    background-color: #fff; /* Bílé pozadí pro hlavní obsah */
+    color: #444; /* Tmavší barva pro text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín pro oddělení */
+}
+
+footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5em; /* Zvýšené padding pro lepší vzhled */
+    font-size: 1rem; /* Menší text pro patičku */
+}
